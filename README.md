@@ -2,8 +2,6 @@
 
 A Chrome extension that provides AI-powered assistance for solving LeetCode problems. Instead of giving direct answers, it acts as a mentor that guides you through problem-solving with hints and explanations.
 
-![Extension Banner](screenshots/banner.png)
-
 ## Features
 
 - **AI Chat Assistant** - Ask questions about any LeetCode problem directly on the page
@@ -24,7 +22,7 @@ A Chrome extension that provides AI-powered assistance for solving LeetCode prob
 ### Chat Interface (Light Mode)
 ![Chat Light Mode](assets/chat-light.png)
 
-### Getting Hints
+### Explain example
 ![Hints Example](assets/hints-example.png)
 
 ## Installation
@@ -105,15 +103,15 @@ Edit `prompt.txt` to modify how the AI responds to questions.
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
-
-MIT License - feel free to use and modify.
 
 ## Acknowledgments
 
 - [Groq](https://groq.com/) for the fast AI inference API
 - [LeetCode](https://leetcode.com/) for being an awesome platform
 
+#Happy Coding
+
+
 ---
 
-**Note:** This extension is not affiliated with LeetCode. Use responsibly for learning purposes.
+**Note:** This extension is not affiliated with L
