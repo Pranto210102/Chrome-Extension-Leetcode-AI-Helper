@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "Leetcode AI Helper Extension",
+    "version": "1.0",
+    "description": "An extension to assist with Leetcode problems using AI.",
+    "permissions": [
+        "storage",
+        "tabs",
+        "scripting"
+    ],
+
+    "host_permissions": [
+        "https://google.serper.dev/*"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["https://leetcode.com/*"],
+            "js": ["context.js",
+                    "storage.js",
+                    "content.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/icon.jpg",
+                "prompt.txt"
+            ],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Leetcode AI Helper"
+    }
+}
