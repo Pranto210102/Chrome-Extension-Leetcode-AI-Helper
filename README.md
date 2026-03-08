@@ -109,17 +109,13 @@ Edit `prompt.txt` to modify how the AI responds to questions.
 - [Groq](https://groq.com/) for the fast AI inference API
 - [LeetCode](https://leetcode.com/) for being an awesome platform
 
-<<<<<<< HEAD
-#Happy Coding
 
-
----
-
-**Note:** This extension is not affiliated with L
-=======
 ## Happy Coding
 
 Pranto Bala
+
 Computer Science and Engineering
+
 Jashore University of Science and Teachnology
->>>>>>> c0153c8 (Update README)
+
+
