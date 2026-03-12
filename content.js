@@ -16,7 +16,8 @@ function AIHelpButton() {
     }
     
     const btnPos = document.getElementsByClassName("relative flex flex-1 items-center justify-end")[0];
-    const button = document.createElement("AI-help-button");
+    if (!btnPos) return;
+    const button = document.createElement("button");
     button.className = "AI-help-button";
     btnPos.insertAdjacentElement("beforebegin", button);
 

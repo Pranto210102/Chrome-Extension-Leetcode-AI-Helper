@@ -10,7 +10,8 @@
     ],
 
     "host_permissions": [
-        "https://google.serper.dev/*"
+        "https://google.serper.dev/*",
+        "https://api.groq.com/*"
     ],
 
     "content_scripts": [

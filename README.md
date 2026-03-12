@@ -34,18 +34,15 @@ A Chrome extension that provides AI-powered assistance for solving LeetCode prob
 
 2. Get a free API key from [Groq Console](https://console.groq.com/)
 
-3. Open `background.js` and replace the API key:
-   ```javascript
-   const API_KEY = "YOUR_GROQ_API_KEY";
-   ```
+3. Open Chrome and navigate to `chrome://extensions/`
 
-4. Open Chrome and navigate to `chrome://extensions/`
+4. Enable **Developer mode** (toggle in top right)
 
-5. Enable **Developer mode** (toggle in top right)
+5. Click **Load unpacked** and select the project folder
 
-6. Click **Load unpacked** and select the project folder
+6. Click the extension icon in Chrome toolbar and enter your Groq API key
 
-7. Navigate to any LeetCode problem and click the green **AI Help** button
+7. Navigate to any LeetCode problem and click the **AI Help** button
 
 ## Usage
 
@@ -71,7 +68,8 @@ Leetcode-AI-Helper/
 ├── content.js         # Injects UI into LeetCode pages
 ├── context.js         # Extracts problem context from page
 ├── storage.js         # Manages conversation history
-├── popup.html         # Extension popup (click on icon)
+├── popup.html         # Extension popup UI
+├── popup.js           # Popup logic - saves API key
 ├── prompt.txt         # System prompt for AI behavior
 └── assets/
     └── icon.jpg       # Extension icon
@@ -116,6 +114,6 @@ Pranto Bala
 
 Computer Science and Engineering
 
-Jashore University of Science and Teachnology
+Jashore University of Science and Technology
 
 

@@ -3,8 +3,15 @@ function getProblemKey() {
     return "leetcode_chat_" + parts[2];
 }
 
+function isStorageAvailable() {
+    return typeof chrome !== "undefined" && chrome.storage && chrome.storage.local;
+}
 
 function saveMessage(role, text) {
+    if (!isStorageAvailable()) {
+        console.error("chrome.storage not available");
+        return;
+    }
 
     const key = getProblemKey();
 
@@ -26,6 +33,10 @@ function saveMessage(role, text) {
 
 
 function loadConversation(container) {
+    if (!isStorageAvailable()) {
+        console.error("chrome.storage not available");
+        return;
+    }
 
     const key = getProblemKey();
 
@@ -60,6 +71,10 @@ function loadConversation(container) {
 
 
 function clearConversation() {
+    if (!isStorageAvailable()) {
+        console.error("chrome.storage not available");
+        return;
+    }
 
     const key = getProblemKey();
 

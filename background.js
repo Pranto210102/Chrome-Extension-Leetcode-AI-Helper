@@ -1,6 +1,4 @@
-const API_KEY = "YOUR_GROQ_API_KEY";
-const API_URL = "https://api.groq.com/v1/generate";
-
+const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 let SYSTEM_PROMPT = "";
 
 /* Load prompt.txt once when extension starts */
@@ -13,6 +11,20 @@ async function loadPrompt() {
     } catch (err) {
         console.error("Prompt load error:", err);
     }
+}
+
+/* Get API key from chrome.storage */
+async function getApiKey() {
+    return new Promise((resolve) => {
+        if (typeof chrome === "undefined" || !chrome.storage) {
+            console.error("chrome.storage not available");
+            resolve("");
+            return;
+        }
+        chrome.storage.local.get(["groqApiKey"], (result) => {
+            resolve(result.groqApiKey || "");
+        });
+    });
 }
 
 loadPrompt();
@@ -37,6 +49,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 /* Call Groq AI */
 async function callGroqAPI(userMessage, description, userCode) {
+    const API_KEY = await getApiKey();
+    
+    if (!API_KEY) {
+        return "Please set your Groq API key in the extension popup first.";
+    }
 
     const response = await fetch(API_URL, {
         method: "POST",

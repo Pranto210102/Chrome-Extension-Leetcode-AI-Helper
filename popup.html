@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <body>
-        <h3>Leetcode AI Helper</h3>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { width: 300px; padding: 15px; font-family: Arial, sans-serif; }
+        input { width: 100%; padding: 8px; margin: 10px 0; box-sizing: border-box; }
+        button { width: 100%; padding: 8px; background: #ffa116; border: none; cursor: pointer; border-radius: 4px; }
+        #status { margin-top: 10px; color: green; }
+    </style>
+</head>
+<body class="pop-up-box">
+    <p>Your Leetcode AI Helper</p>
+    <input type="text" id="apiKeyInput" placeholder="Enter your Groq AI API Key">
+    <button id="saveApiKeyButton">Save API Key</button>
+    <div id="status"></div>
+    <script src="popup.js"></script>
+</body>
 </html>
